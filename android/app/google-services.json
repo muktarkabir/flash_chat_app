@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "547918022030",
+    "project_id": "flash-chat-acefd",
+    "storage_bucket": "flash-chat-acefd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547918022030:android:cdfec4768a56c10b3010df",
+        "android_client_info": {
+          "package_name": "com.mukhtar.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvUwq8-qPJa3sA6QL-m683BxRxxbShr5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
