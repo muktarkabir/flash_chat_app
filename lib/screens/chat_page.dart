@@ -104,6 +104,7 @@ class _ChatPageState extends State<ChatPage> {
           return Expanded(
             child: ListView.builder(
               controller: _myScrollController,
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
               itemCount: messages!.length,
               itemBuilder: (context, index) {
                 final message = messages[index];
