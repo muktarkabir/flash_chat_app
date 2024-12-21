@@ -92,21 +92,29 @@ class _ChatPageState extends State<ChatPage> {
           }
           final messages = snapshot.data?.docs;
 
-          List<ChatBubble> chatBubbles = [];
+          // List<ChatBubble> chatBubbles = [];
 
-          for (var message in messages!) {
-            final messageSender = message['senderId'];
-            final messageText = message['message'];
-            final isCurrentUser = messageSender == AuthService.currentUserId;
-            chatBubbles.add(
-                ChatBubble(message: messageText, isCurrentUser: isCurrentUser));
-          }
+          // for (var message in messages!) {
+          //   final messageSender = message['senderId'];
+          //   final messageText = message['message'];
+          //   final isCurrentUser = messageSender == AuthService.currentUserId;
+          //   chatBubbles.add(
+          //       ChatBubble(message: messageText, isCurrentUser: isCurrentUser));
+          // }
           return Expanded(
-            child: ListView(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+            child: ListView.builder(
               controller: _myScrollController,
-              children: chatBubbles,
+              itemCount: messages!.length,
+              itemBuilder: (context, index) {
+                final message = messages[index];
+                final messageSender = message['senderId'];
+                final messageText = message['message'];
+                final isCurrentUser =
+                    messageSender == AuthService.currentUserId;
+
+                return ChatBubble(
+                    message: messageText, isCurrentUser: isCurrentUser);
+              },
             ),
           );
         });
