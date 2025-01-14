@@ -4,8 +4,8 @@ import 'package:flash_chat_app/services/auth/auth_service.dart';
 import 'package:flash_chat_app/services/databases/group_chat_database.dart';
 import 'package:flutter/material.dart';
 
-class GroupChatStream extends StatelessWidget {
-  const GroupChatStream({
+class GroupChatStreamBuilder extends StatelessWidget {
+  const GroupChatStreamBuilder({
     super.key,
   });
   @override

@@ -1,4 +1,4 @@
-import 'package:flash_chat_app/components/group_chat_stream.dart';
+import 'package:flash_chat_app/components/group_chat_stream_builder.dart';
 import 'package:flash_chat_app/components/user_input_row.dart';
 import 'package:flash_chat_app/services/databases/group_chat_database.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +62,7 @@ class _GroupChatPageState extends State<GroupChatPage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const GroupChatStream(),
+          const GroupChatStreamBuilder(),
           // Container(
           //   decoration: kMessageContainerDecoration,
           //   child: Row(
